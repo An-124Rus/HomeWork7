@@ -2,21 +2,19 @@
 {
     private static void Main(string[] args)
     {
-        int oneHour;
-        int oneMinute = 1;        
         int numberOfGrannies;
-        int timeForOneGranny = 10;
+        int patientWaitingTime = 10;
         int totalTime;
         int hoursInQueue;
-        int minutesInQueue;        
+        int minutesInQueue;
+        int minutesInHour = 60;
 
         Console.Write("Введите количество старушек в очереди: ");
         numberOfGrannies = Convert.ToInt32(Console.ReadLine());
 
-        oneHour = oneMinute * 60;
-        totalTime = numberOfGrannies * timeForOneGranny;
-        hoursInQueue = totalTime / oneHour;
-        minutesInQueue = totalTime % oneHour;
+        totalTime = numberOfGrannies * patientWaitingTime;
+        hoursInQueue = totalTime / minutesInHour;
+        minutesInQueue = totalTime % minutesInHour;
 
         Console.WriteLine($"Вам придётся отстоять в очереди {hoursInQueue} часов и {minutesInQueue} минут");
     }
