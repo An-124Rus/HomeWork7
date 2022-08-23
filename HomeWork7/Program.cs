@@ -2,19 +2,19 @@
 {
     private static void Main(string[] args)
     {
-        int granny;
+        int numberOfGrannies;
         int interval = 10;
         int totalTime;
-        int minutes;
-        int hour;
+        int remainHours;
+        int remainMinutes;        
 
         Console.Write("Введите количество старушек в очереди: ");
-        granny = Convert.ToInt32(Console.ReadLine());
+        numberOfGrannies = Convert.ToInt32(Console.ReadLine());
 
-        totalTime = granny * interval;
-        hour = totalTime / 60;
-        minutes = totalTime % 60;
+        totalTime = numberOfGrannies * interval;
+        remainHours = totalTime / 60;
+        remainMinutes = totalTime % 60;
 
-        Console.WriteLine($"Вам придётся отстоять в очереди {hour} часов и {minutes} минут");
+        Console.WriteLine($"Вам придётся отстоять в очереди {remainHours} часов и {remainMinutes} минут");
     }
 }
